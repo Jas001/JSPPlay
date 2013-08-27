@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Welcome</title>
+</head>
+<body>
+<h1>Welcome to JSPPlay</h1>
+<p>There isn't a lot here because this is just a little playground for JSP.</p>
+<p>I'm able to create a servlet but haven't really found a good way to do server side code
+and separate the html from the event logic.  I'm thinking this is where jsp comes in.  So,
+I thought I would give it a try.</p>
+<p>The first thing I've done is create just a simple servlet
+to make sure everything is working properly and to get warmed up.  I had a little bit of an issue because
+I have tomcat installed on my computer and it is actually running.  But, it has been awhile since I've done
+Java so I've had the service turned off.  So, this workspace didn't have any servers, so I created a new virtual server pointing
+at the tomcat directory.  And, it seems to be working now.  So here it is.</p>
+
+<a href="SimpleServlet">Step 1: Simple Servlet</a>  
+<p>I created a new xml web service and noticed that the location of the servlet mapping is important.  I had the mappings next to eachother
+and it didn't work.  So, something new to know.  I'm also aware that Java 5 supports annotations but I'm not interested in that right now.
+</p>
+<a href="XMLServlet">Step 2: XML Servlet(not really xml, just two servlets configured in web.xml)</a> 
+<a href="http://www.youtube.com/watch?v=MnUJl3NYRRc">Tutorial I was following.</a>
+<p>This is the same XMLServlet but with parameter support added. Also uses a session for the name so if you pass in Name and then pass in blank it will return your name.</p>
+<a href="XMLServlet?userName=Jason">Step 3: XML Servlet(say hello to me)</a> 
+<br/><br/>
+<form action="XMLServlet" method="post">
+<div style="padding:20px;background-color:#efefef;">
+<div>Form using Post Method</div>
+Type Name:<input type="text" name="userName"><input type="submit" value="send"/></div>
+</form>
+
+<h2>JSP</h2>
+<p>I created a jsp page.  This is identical to ASP.</p>
+<a href="test.jsp">Step 1: JSP</a>  
+<p>I got a little carried away and wrote a tic tac toe JSP page.  This used a class with unit testing and session variables for the score.</p>
+<a href="TicTacToe.jsp">Step 2: Play TicTacToe!</a>  
+</body>
+</html>
